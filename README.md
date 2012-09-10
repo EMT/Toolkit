@@ -7,4 +7,4 @@ This repository contains the content of the toolkit as well as the code and asse
 
 Sometime soon you’ll be able to find it at madebyfieldwork.co/toolkit
 
-For information about the toolkit, please see README in the /toolkit folder.
+For information about the toolkit, please see the README in the /toolkit folder.
