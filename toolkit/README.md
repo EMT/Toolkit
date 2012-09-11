@@ -5,7 +5,7 @@ The Fieldwork Toolkit is the result of documenting our processes and tools as th
 
 ## Key Concepts 
 
-People – their skills, experience, knowledge and ability to adapt – are the key to solving problems and making things that work. We’re not interested in creating a paint-by-numbers method for making things. We want a framework that works **because** of the skills of the people using it, not **despite** them. Tools we can use and adapt on a project-by-project basis, and that helps us work with varying requirements and constraints.
+People – their skills, experience, knowledge and ability to adapt – are the key to solving problems and making things that work. We’re not interested in creating a paint-by-numbers method for making things. We want a framework that works **because** of the skills of the people using it, not **despite** them. Tools we can use and adapt on a project-by-project basis, that help us work with varying requirements and constraints.
 
 ### Grow as we grow
 
