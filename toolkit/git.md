@@ -27,6 +27,25 @@ Git then splits the file into logical hunks of code and presents you with an int
 ###Autocorrect
 If you've ever made a typo when running a Git command, you may have noticed Git sometimes replies with a "did you mean...?" question. Currently there's no way to answer this with a "y" or "n", but you can utilise Git's autocorrect feature by typing
 
-`git config --global help.autocorrect 5`
+	git config --global help.autocorrect 5
 
 The number above represents a time in units of 100ms. From now on, git will automatically rerun what you typed, with the autocorrected command, after a delay of 0.5 seconds. If you don't want Git to execute the autocorrected command, press <kbd>ctrl</kbd>+<kbd>c</kbd>, before the time elapses.
+
+###Creating, pushing to, and tracking new branches
+
+If you're working on a new feature, it's a good idea to create a new branch. This is so if a bug arises in existing code before your new feature is ready, you can easily fix it in the original branch without it getting embroiled in your semi-completed new feature.
+
+To create a new branch (such as "my-new-feature") type the following: 
+
+	git branch my-new-feature
+	git checkout my-new-feature
+
+You can do the above two lines in one fell swoop with
+
+	git checkout -b my-new-feature
+
+To push the new branch to a remote, use the following:
+
+	git push -u origin my-new-feature
+
+The `-u` option sets up tracking meaning in the future when we do a `git pull` or `git push` we don't need to specify branch names.
