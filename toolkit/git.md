@@ -29,4 +29,4 @@ If you've ever made a typo when running a Git command, you may have noticed Git 
 
 `git config --global help.autocorrect 5`
 
-The number above represents a time in units of 100ms. From now on, git will automatically rerun what you typed, with the autocorrected command, after a delay of 0.5 seconds.
+The number above represents a time in units of 100ms. From now on, git will automatically rerun what you typed, with the autocorrected command, after a delay of 0.5 seconds. If you don't want Git to execute the autocorrected command, press <kbd>ctrl</kbd>+<kbd>c</kbd>, before the time elapses.
