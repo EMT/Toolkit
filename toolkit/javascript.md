@@ -52,3 +52,6 @@ So in the example above, the code will become:
 	$(".js-add-to-cart").click(function(){
 		//code to add product to cart goes here...
 	});
+
+
+For further reading, head over to [philipwalton.com/articles/decoupling-html-css-and-javascript/](http://philipwalton.com/articles/decoupling-html-css-and-javascript/)
