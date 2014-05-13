@@ -49,3 +49,18 @@ To push the new branch to a remote, use the following:
 	git push -u origin my-new-feature
 
 The `-u` option sets up tracking meaning in the future when we do a `git pull` or `git push` we don't need to specify branch names.
+
+
+
+###Submodules
+If, for example, we're working on a lithium project, we want to easily keep the Lithium core up to date. To help with this, we can load it as a submodule.
+When you first clone a project that contains submodules, you get the directories that contain the submodules, but none of the files yet. To get these files,
+you need to run two commands: 
+
+`git submodule init`
+
+initializes your local configuration file (.gitmodules), and 
+
+`git submodule update` 
+
+fetches all the data from that project.
