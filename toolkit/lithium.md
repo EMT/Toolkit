@@ -9,6 +9,6 @@ You can set up a new database and corresponding user through [phpMyAdmin](http:/
 
 Once the database has been set up, run the migrations by visiting
 
-    [project-url]/console/migrate/li3_auth
+    [project-url]/webconsole/migrate/
 
 (This makes sure all our local databases are kept in sync.)
