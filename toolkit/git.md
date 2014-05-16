@@ -18,6 +18,26 @@ You might find [this tutorial](https://www.atlassian.com/git/tutorial/git-basics
 
 ## Tips and Tricks
 
+###Git Ignore
+Every project should have a .gitignore file in its root directory to stop certain files from being needlessly tracked. Setting this up in the first
+commit saves you the hassle of dealing with the problem later on. Here is what Fieldwork's default .gitignore looks like (lines beginning with `#` are comments):
+
+	# All .DS_Store files (created by OSX to store custom attributes of a folder)
+    .DS_Store
+
+	# All files in all sass-cache folders (created by Sass to speed up compilation speed)
+    *.sass-cache*
+
+Various projects using various frameworks will probably need other folders and files to be put in .gitignore. For examples, [see here](https://github.com/github/gitignore).
+
+If you're working on a project with stray .DS_Store files in it, you can remove them all with the following line
+
+    find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch
+
+Then commit the changes.
+
+(It's worth noting that .gitignore will only ignore matching files that are *not* already in the repository)
+
 ###Patch mode
 Sometimes you'll find that when the time comes to add a file to the staging index, the file has two modifications that are unrelated to each other.
 As a general principle, you should try to put unrelated changes in separate commits. You can do this by adding the file with `git add -p` or `git add --patch`.
