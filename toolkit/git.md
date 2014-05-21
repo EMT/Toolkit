@@ -84,3 +84,9 @@ initializes your local configuration file (.gitmodules), and
 `git submodule update` 
 
 fetches all the data from that project.
+
+If you ever need to change any of the URLs in the file, you need to run 
+
+`git submodule sync`
+
+This means that next time you try to update the submodules, git will look for them at the new address.
