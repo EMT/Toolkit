@@ -90,3 +90,9 @@ If you ever need to change any of the URLs in the file, you need to run
 `git submodule sync`
 
 This means that next time you try to update the submodules, git will look for them at the new address.
+
+
+###Quitting Vim
+
+For various reasons (such as forgetting the `-m` option during a commit), Git will sometimes open up Vim for you to type a commit message. It's not obvious how to exit Vim, so, when you want to quit,
+press <kbd>ESC</kbd> to get into command mode. Then type `:q` and press enter.
