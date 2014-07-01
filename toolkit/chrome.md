@@ -5,10 +5,9 @@ In the console type
 
 `document.designMode = "on"`
 
-This makes the page easily editable (useful for changing text for screenshots etc). You can make a bookmarklet out of this
-by creating a new bookmark with the following line as the URL.
+This makes the page easily editable (useful for changing text for screenshots etc). You can make a bookmarklet to toggle this mode on and off by highlighting the following and dragging to the bookmarks bar:
 
-`javascript:void(document.designMode = 'on')`
+`javascript:(function () {if (document.documentElement.contentEditable === false || document.designMode === "off") {document.body.contentEditable='true';document.designMode='on';void 0;} else if (document.documentElement.contentEditable === true || document.designMode === "on") {document.body.contentEditable='false';document.designMode='off';void 0;}})();`
 
 ###Keyboard Shortcuts
 
@@ -19,6 +18,6 @@ by creating a new bookmark with the following line as the URL.
 
 <kbd>cmd</kbd>+<kbd>shift</kbd>+<kbd>T</kbd> to open most recently closed tab
 
-<kbd>cmd</kbd>+<kbd>shift</kbd>+<kbd>C</kbd> to open dev tools
+<kbd>cmd</kbd>+<kbd>opt</kbd>+<kbd>I</kbd> to open dev tools
 
 <kbd>cmd</kbd>+<kbd>L</kbd> to select the URL at the top of the browser
