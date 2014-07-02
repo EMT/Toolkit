@@ -70,7 +70,10 @@ To push the new branch to a remote, use the following:
 
 The `-u` option sets up tracking meaning in the future when we do a `git pull` or `git push` we don't need to specify branch names.
 
+When working in a branch, rebase often. This keeps your branch up to date with changes in master:
 
+	git fetch origin master
+	git rebase origin/master
 
 ###Submodules
 If, for example, we're working on a lithium project, we want to easily keep the Lithium core up to date. To help with this, we can load it as a submodule.
