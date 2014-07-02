@@ -10,6 +10,7 @@ if anyone accidentally introduces bugs or mistakes.
 
 Git is Fieldwork's version control system of choice.
 
+Our workflow is based on the one outlined [here](http://reinh.com/blog/2009/03/02/a-git-workflow-for-agile-teams.html).
 
 #### New to Git?
 
