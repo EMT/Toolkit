@@ -21,9 +21,20 @@ ssh root@ip.address.goes.here
 
 Type "yes" if you get a warning. Enter the root password (emailed to you after setting up the server instance).
 
+Update:
+```
+apt-get update
+```
+
 Add new user:
 ```
 adduser [your_username]
+```
+
+Then add the user to the sudoers:
+
+```
+adduser [your_username] sudo
 ```
 
 Create the password, and then just hit return for each of the other fields.
@@ -32,8 +43,44 @@ Create the password, and then just hit return for each of the other fields.
 
 - [Install UFW](https://www.digitalocean.com/community/articles/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server)
 
+`sudo apt-get install ufw`
+
 Change the port number from the default 22 to something less obvious:
 
 - `sudo ufw allow [your ssh port number]/tcp`
 - `sudo nano /etc/ssh/sshd_config` change Port from 22 to [your ssh port number]
 - `sudo invoke-rc.d ssh restart`
+
+## 4. Install Apache
+
+```
+apt-get install apache2
+```
+
+## 5. Install MySQL
+
+```
+apt-get install mysql-server
+```
+
+You'll be prompted to set up a password for the root user during installation.
+
+Run:
+
+```
+mysql_secure_installation
+```
+
+Answer yes at each step.
+
+## 6. Install PHP
+
+```
+apt-get install php5 php-pear php5-mysql
+```
+
+Restart Apache:
+
+```
+service apache2 restart
+```
