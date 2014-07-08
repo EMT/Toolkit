@@ -137,6 +137,13 @@ ErrorLog  /home/user/web/appname/logs/error.log
 CustomLog /home/user/web/appname/logs/access.log combined
 ```
 
+### Enable site
+
+```
+a2ensite site_name
+service apache2 restart
+```
+
 ## 7. Other bits you’ll probably need
 
 Enable mod rewrite:
