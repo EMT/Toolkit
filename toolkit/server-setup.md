@@ -84,3 +84,69 @@ Restart Apache:
 ```
 service apache2 restart
 ```
+
+## 8. Set up a public site, served by Apache
+
+### Create directory structure
+
+```
+mkdir ~/web
+mkdir ~/web/site_name
+mkdir ~/web/site_name/logs
+```
+
+### Create virtual host
+
+```
+nano /etc/apache2/sites-available/site_name
+```
+
+Add the following, replacing the placeholder stuff
+
+```
+# domain: example.com
+# public: /path/to/public/root
+
+<VirtualHost *:80>
+
+  # Admin email, Server Name (domain name) and any aliases
+  ServerAdmin someone@example.com
+  ServerName  example.com
+  ServerAlias www.example.com
+
+
+  # Index file and Document Root (where the public files are located)
+  DirectoryIndex index.php
+  DocumentRoot /path/to/public/root
+
+
+  # Custom log file locations
+  ErrorLog  /path/to/logs/error.log
+  CustomLog /path/to/logs/access.log combined
+
+  AllowEncodedSlashes On
+
+</VirtualHost>
+```
+
+#### For an Li3 app
+
+```
+DocumentRoot: /home/user/web/appname/reponame/app/webroot
+ErrorLog  /home/user/web/appname/logs/error.log
+CustomLog /home/user/web/appname/logs/access.log combined
+```
+
+## 7. Other bits you’ll probably need
+
+Enable mod rewrite:
+
+```
+a2enmod rewrite 
+service apache2 restart
+```
+
+Install Git:
+```
+apt-get install git-core
+```
