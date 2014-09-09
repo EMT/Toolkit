@@ -76,6 +76,15 @@ When working in a branch, rebase often. This keeps your branch up to date with c
 	git fetch origin master
 	git rebase origin/master
 
+###Pushing from a specific local branch to a specific remote branch
+
+You may sometimes find yourself working in one branch and needing to push to a different remote branch.
+If the local branch is called `new-feature` and you want to push to a branch called `master` on the remote called `origin`, then do the following:
+
+```
+git push origin new-feature:master
+```
+
 ###Submodules
 If, for example, we're working on a lithium project, we want to easily keep the Lithium core up to date. To help with this, we can load it as a submodule.
 When you first clone a project that contains submodules, you get the directories that contain the submodules, but none of the files yet. To get these files,
