@@ -15,3 +15,5 @@ To install composer packages for a project:
 2. Run install: `composer install`
 
 Have a look at [the docs](https://getcomposer.org/doc/00-intro.md) for more on using Composer.
+
+_Quick note: If you have issues with Unicode settings in your php.ini file when initially setting composer up check this [stack overflow](http://stackoverflow.com/questions/11302593/how-to-disable-detect-unicode-setting-from-php-ini-trying-to-install-compose)._
