@@ -51,6 +51,15 @@ Change the port number from the default 22 to something less obvious:
 - `sudo nano /etc/ssh/sshd_config` change Port from 22 to [your ssh port number]
 - `sudo invoke-rc.d ssh restart`
 
+Allow web traffic:
+
+- `sudo ufw allow http`
+- `sudo ufw allow https`
+
+And tuen the firwall on:
+
+- `sudo ufw enable`
+
 ## 4. Install Apache
 
 ```
