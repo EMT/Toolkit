@@ -23,6 +23,6 @@ To get a Homestead project up and running on your local machine, follow these st
 
 7. If you need to create any databases and/or users, create them on the virtual box using Sequel Pro.
 
-8. If necessary, run migrations with `php artisan migrate` and seed with `php artisan  db:seed`
+8. If necessary, run migrations/seed the database. To do this, first ssh into homestead with `homestead ssh`. Then `cd` to the project folder. Then run `php artisan migrate` to migrate or `php artisan  db:seed` to seed.
 
 9. Run `gulp` to run the build tools.
